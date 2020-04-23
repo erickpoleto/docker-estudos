@@ -1,0 +1,56 @@
+__PS__
+
+docker ps (actives)
+docker ps -a (notactives)
+docker ps -q
+
+
+__RUN__
+docker run ""
+docker run -it ...
+docker run dockersamples/static-site
+	      username
+docker run -d -P username/image
+docker run -d -P --name containername username/image
+docker run -d -p 1235:80 username/image
+docker run -d -P -e AUTHOR="erick" dockersamples/static-site (variavel de ambiente)
+
+
+__START__
+docker start ID
+docker start -a -i id
+-a = attach -i = interactive
+
+__STOP__
+docker stop id
+docker stop -t 0 id
+docker stop -t 0 $(docker ps -q)(stop all containers)
+
+__RM__
+docker rm id
+0docker container prune
+docker images
+docker rmi imagem
+
+docker-machine ip
+
+__BUILD__
+docker build -f docker.Dockerfile -t erickpoleto/node .
+
+__pushToDockerHub__
+docker login
+docker push erickpol/node
+
+__hostname__
+hostname -i
+
+
+---Ubuntu---
+ls
+apt-get update
+touch
+ls
+echo "tal" > arquivo
+cat arquivo
+
+apt-get update && apt-get install -y iputils-ping
